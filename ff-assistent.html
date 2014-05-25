@@ -1,0 +1,451 @@
+<head>
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="ff-assistent_script.js"></script>
+<link href="cascade.css" rel="stylesheet" />
+<link href="ff-assistent.css" rel="stylesheet" />
+</head>
+<body>
+	<h2>Freifunkassistent</h2>
+	<form>
+		<div id="configNavi">
+			<ul>
+				<li id="navi_passwordSection" class="selected">Password</li>
+				<li id="navi_generalSection">General Setting</li>
+				<li id="navi_radio0MeshSection">RADIO0 Mesh Config</li>
+				<li id="navi_radio0ClientSection">RADIO0 Client Config</li>
+				<li id="navi_lanSection">LAN Config</li>
+				<li id="navi_internetSection">Internet Config</li>
+			</ul>
+		</div>
+		<div id="passwordSection" class="section">
+			<h3>Change Password</h3>
+			<div class="help">Hier k&ouml;nnen Sie ihr Password
+				&auml;ndern. Sp&auml;ter finden Sie diese Option im Bereich System
+				&gt; Administration.</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="password">Password</label>
+				<div class="cbi-value-field">
+					<input type="password" id="password" name="password" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="confirmation">Confirmation</label>
+				<div class="cbi-value-field">
+					<input type="password" id="confirmation" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-page-actions">
+				<button class="cbi-button cbi-button-save" type="button" name="skip"
+					onclick="skipSection('passwordSection','generalSection');return false;">Skip</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="nextSection('passwordSection','generalSection'); return false">Next</button>
+			</div>
+		</div>
+		<div id="generalSection" class="section">
+			<h3>General Section</h3>
+			<div class="help">Geben Sie hier Ihre Basisinformationen an.
+				Sie k&ouml;nnen Sie sp&auml;ter im Bereich Freifunk &gt; Basic
+				Settings und Freifunk &gt; Contact &auml;ndern.</div>
+			<div class="cbi-value">
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="community">Freifunk
+						Community</label>
+					<div class="cbi-value-field">
+						<select size="1" name="cbid.ffwizward.1.net" id="community"
+							class="cbi-input-select">
+							<option value="Freifunk" id="cbi-ffwizward-1-net-Freifunk">Freifunk</option>
+							<option value="aachen" id="cbi-ffwizward-1-net-aachen">Aachen</option>
+							<option value="altmark" id="cbi-ffwizward-1-net-altmark">Freifunk
+								Altmark</option>
+							<option value="arig_arad" id="cbi-ffwizward-1-net-arig_arad">arig
+								Arad</option>
+							<option value="arig_neot_semadar"
+								id="cbi-ffwizward-1-net-arig_neot_semadar">arig Neot
+								Semadar</option>
+							<option value="arig_tel-aviv"
+								id="cbi-ffwizward-1-net-arig_tel-aviv">arig Tel Aviv</option>
+							<option value="augsburg" id="cbi-ffwizward-1-net-augsburg">Freifunk
+								Augsburg</option>
+							<option value="bayreuth" id="cbi-ffwizward-1-net-bayreuth">Freifunk
+								Bayreuth</option>
+							<option value="bensheim" id="cbi-ffwizward-1-net-bensheim">Freifunk
+								Bensheim</option>
+							<option value="bergischesland"
+								id="cbi-ffwizward-1-net-bergischesland">Piratenfreifunk
+								Bergisches Land</option>
+							<option selected="selected" value="berlin"
+								id="cbi-ffwizward-1-net-berlin">Freifunk Berlin</option>
+							<option value="bno" id="cbi-ffwizward-1-net-bno">Berlin
+								NordOst</option>
+							<option value="carbodebit" id="cbi-ffwizward-1-net-carbodebit">carbodebit</option>
+							<option value="demo" id="cbi-ffwizward-1-net-demo">Freifunk
+								Demo</option>
+							<option value="duesseldorf" id="cbi-ffwizward-1-net-duesseldorf">Freifunk
+								Duesseldorf</option>
+							<option value="erfurt" id="cbi-ffwizward-1-net-erfurt">Freifunk
+								Erfurt</option>
+							<option value="evernet" id="cbi-ffwizward-1-net-evernet">Freifunk
+								Evernet eG</option>
+							<option value="gadow" id="cbi-ffwizward-1-net-gadow">Freifunk
+								Gadow</option>
+							<option value="guifibages" id="cbi-ffwizward-1-net-guifibages">Guifi
+								Bages</option>
+							<option value="halle" id="cbi-ffwizward-1-net-halle">Freifunk
+								Halle</option>
+							<option value="hannover" id="cbi-ffwizward-1-net-hannover">Freifunk
+								Hannover</option>
+							<option value="heppenheim" id="cbi-ffwizward-1-net-heppenheim">Freifunk
+								Heppenheim</option>
+							<option value="hooge" id="cbi-ffwizward-1-net-hooge">Freifunk
+								Hooge</option>
+							<option value="kiberpipa" id="cbi-ffwizward-1-net-kiberpipa">Kiberpipa.net</option>
+							<option value="kyritz" id="cbi-ffwizward-1-net-kyritz">Freifunk
+								Kyritz</option>
+							<option value="l59" id="cbi-ffwizward-1-net-l59">Freifunk
+								L59</option>
+							<option value="leipzig" id="cbi-ffwizward-1-net-leipzig">Freifunk
+								Leipzig</option>
+							<option value="mainz" id="cbi-ffwizward-1-net-mainz">Freifunk
+								Mainz</option>
+							<option value="marburg" id="cbi-ffwizward-1-net-marburg">Freifunk
+								Marburg</option>
+							<option value="neuss" id="cbi-ffwizward-1-net-neuss">Freifunk
+								Neuss</option>
+							<option value="oldenburg" id="cbi-ffwizward-1-net-oldenburg">Freifunk
+								Oldenburg</option>
+							<option value="openwireless_bern"
+								id="cbi-ffwizward-1-net-openwireless_bern">Openwireless
+								Bern</option>
+							<option value="pberg" id="cbi-ffwizward-1-net-pberg">Freifunk
+								Berlin Prenzlauer Berg</option>
+							<option value="piraten_dresden"
+								id="cbi-ffwizward-1-net-piraten_dresden">Piratenfreifunk
+								Dresden</option>
+							<option value="potsdam" id="cbi-ffwizward-1-net-potsdam">Freifunk
+								Potsdam</option>
+							<option value="reihen" id="cbi-ffwizward-1-net-reihen">Freifunk
+								Reihen</option>
+							<option value="rosbach" id="cbi-ffwizward-1-net-rosbach">Freifunk
+								Rosbach</option>
+							<option value="schwarzach" id="cbi-ffwizward-1-net-schwarzach">Freifunk
+								Schwarzach</option>
+							<option value="seefeld" id="cbi-ffwizward-1-net-seefeld">Freifunk
+								Seefeld</option>
+							<option value="stuttgart" id="cbi-ffwizward-1-net-stuttgart">Freifunk
+								Stuttgart</option>
+							<option value="vogtland" id="cbi-ffwizward-1-net-vogtland">Freifunk
+								Vogtland</option>
+							<option value="weil" id="cbi-ffwizward-1-net-weil">Freifunk
+								Weil am Rhein</option>
+							<option value="weimar" id="cbi-ffwizward-1-net-weimar">Weimarnetz
+								e.V.</option>
+							<option value="weinstadt" id="cbi-ffwizward-1-net-weinstadt">Freifunk
+								Weinstadt</option>
+							<option value="wlanljubljana"
+								id="cbi-ffwizward-1-net-wlanljubljana">wlan ljubljana</option>
+						</select>
+					</div>
+				</div>
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="nodeName">Knoten Name</label>
+					<div class="cbi-value-field">
+						<input type="text" id="nodeName" name="confirmation" />
+					</div>
+				</div>
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="location">Standort</label>
+					<div class="cbi-value-field">
+						<input type="text" id="location" name="confirmation" />
+					</div>
+				</div>
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="mail">E-Mail</label>
+					<div class="cbi-value-field">
+						<input type="text" id="mail" name="confirmation" />
+					</div>
+				</div>
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="latitude">Latitude</label>
+					<div class="cbi-value-field">
+						<input type="text" id="latitude" name="confirmation" />
+					</div>
+				</div>
+				<div class="cbi-value">
+					<label class="cbi-value-title" for="Longitude">Longitude</label>
+					<div class="cbi-value-field">
+						<input type="text" id="longitude" name="confirmation" />
+					</div>
+				</div>
+				<div class="cbi-page-actions">
+					<button class="cbi-button cbi-button-save" type="button"
+						name="skip"
+						onclick="prevSection('generalSection','passwordSection'); return false;">Previous</button>
+					<button class="cbi-button cbi-button-save" type="button"
+						name="next"
+						onclick="skipSection('generalSection','radio0MeshSection'); return false;">Skip</button>
+					<button class="cbi-button cbi-button-save" type="button"
+						name="next"
+						onclick="nextSection('generalSection','radio0MeshSection'); return false;">Next</button>
+				</div>
+			</div>
+		</div>
+		<div id="radio0MeshSection" class="section">
+			<h3>Radio 0 Mesh Section</h3>
+			<div class="help">
+				<p>
+					Nehmen Sie hier die Einstellungen vor mit denen sich ihr Router mit
+					dem Freifunknetz verbinden kann. Ihr Ger&auml;t und benachbarte
+					Freifunk Knoten m&uuml;ssen auf demselben Kanal senden. Je nach
+					Ger&auml;tetyp k&ouml;nnen Sie zwischen verschiedenen 2,4Ghz und
+					5Ghz Kan&auml;len ausw&auml;hlen. <a
+						href="http://wiki.freifunnk.net">Hier</a> gibt es eine
+					&Uuml;bersicht auf welchem Kan&auml;len und in welchem Mode ihre
+					Community sendet.
+				</p>
+				<p>{Hilfe Distance Optimization}</p>
+				<p>Ihre Mesh IP Adresse erhalten Sie von der Freifunk
+					Gemeinschaft in Ihrer Nachbarschaft. Es ist eine netzweit
+					eindeutige Identifikation, z.B. 104.1.1.1.</p>
+
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="radio0channel">RADIO0
+					Freifunk Kanal</label>
+				<div class="cbi-value-field">
+					<select size="1" name="cbid.ffwizward.1.chan_radio0"
+						id="radio0channel" class="cbi-input-select">
+						<option value="default" id="cbi-ffwizward-1-chan_radio0-default">default</option>
+						<option value="1" id="cbi-ffwizward-1-chan_radio0-1">1
+							(2.412 GHz)</option>
+						<option value="2" id="cbi-ffwizward-1-chan_radio0-2">2
+							(2.417 GHz)</option>
+						<option value="3" id="cbi-ffwizward-1-chan_radio0-3">3
+							(2.422 GHz)</option>
+						<option value="4" id="cbi-ffwizward-1-chan_radio0-4">4
+							(2.427 GHz)</option>
+						<option value="5" id="cbi-ffwizward-1-chan_radio0-5">5
+							(2.432 GHz)</option>
+						<option value="6" id="cbi-ffwizward-1-chan_radio0-6">6
+							(2.437 GHz)</option>
+						<option value="7" id="cbi-ffwizward-1-chan_radio0-7">7
+							(2.442 GHz)</option>
+						<option value="8" id="cbi-ffwizward-1-chan_radio0-8">8
+							(2.447 GHz)</option>
+						<option value="9" id="cbi-ffwizward-1-chan_radio0-9">9
+							(2.452 GHz)</option>
+						<option value="10" id="cbi-ffwizward-1-chan_radio0-10">10
+							(2.457 GHz)</option>
+						<option value="11" id="cbi-ffwizward-1-chan_radio0-11">11
+							(2.462 GHz)</option>
+						<option value="12" id="cbi-ffwizward-1-chan_radio0-12">12
+							(2.467 GHz)</option>
+						<option selected="selected" value="13"
+							id="cbi-ffwizward-1-chan_radio0-13">13 (2.472 GHz)</option>
+					</select>
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="radio0mode">RADIO0
+					Freifunk Mode</label>
+				<div class="cbi-value-field">
+					<select size="1" name="cbid.ffwizward.1.mode_radio1"
+						id="radio0mode" class="cbi-input-select">
+						<option selected="selected" value="adhoc"
+							id="cbi-ffwizward-1-mode_radio1-adhoc">adhoc</option>
+						<option value="ap" id="cbi-ffwizward-1-mode_radio1-ap">ap</option>
+						<option value="sta" id="cbi-ffwizward-1-mode_radio1-sta">sta</option>
+					</select>
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="radio0distance">RADIO0
+					Distance Optimization</label>
+				<div class="cbi-value-field">
+					<input type="text" id="radio0distance" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="radio0meship">RADIO0
+					Mesh IP</label>
+				<div class="cbi-value-field">
+					<input type="text" id="radio0meship" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-page-actions">
+				<button class="cbi-button cbi-button-save" type="button" name="skip"
+					onclick="prevSection('radio0MeshSection','generalSection');return false;">Previous</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="skipSection('radio0MeshSection','radio0ClientSection'); return false;">Skip</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="nextSection('radio0MeshSection','radio0ClientSection'); return false;">Next</button>
+			</div>
+		</div>
+		<div id="radio0ClientSection" class="section">
+			<h3>Access Point Configuration</h3>
+			<div class="help">
+				<p>
+					Hier k&ouml;nnen Sie den Access Point f&uuml;r Clients ihres
+					Freifunknetzwerkes konfigurieren. Dazu k&ouml;nnen Sie einen
+					IP-Addressraum von Ihrer Community bekommen und hier eintragen. Ein
+					<a href="http://www.heise.de/netze/tools/netzwerkrechner/">Netzwerkrechner</a>
+					hilft beim berechnen der richtigen Netzwerkaddresse und des
+					CIDR-Suffix.
+				</p>
+				<p>Beachten Sie beim Vergeben des Netzwerknamens (z.B.
+					meinname.freifunk.net) daruf, dass Sie unterschiedliche Namen
+					vergeben, falls Sie mehrere Router in Ihrer Umgebegung betreiben,
+					da ein Client mit seiner IP nicht die Access Points wechsen kann.</p>
+				<p>Wenn die Felder leer bleiben wird ein Netzwerk automatisch
+					nach den vorgaben aus dem Feld Freifunk Comunity erstellt und der
+					Netzwerkname berechnet sich aus AP+Kanal+SSID der Freifunk
+					Community,</p>
+				<p>Falls Sie keinen Access Point f&uuml;r Ihre Nachbarn
+					konfigurieren m&ouml;chten &uuml;berspringen Sie einfach diesen
+					Punkt.</p>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="ipaddresses">Addressraum</label>
+				<div class="cbi-value-field">
+					<input type="password" id="ipaddresses" name="password" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="ssid">Netzwerkname</label>
+				<div class="cbi-value-field">
+					<input type="password" id="ssid" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-page-actions">
+				<button class="cbi-button cbi-button-save" type="button" name="skip"
+					onclick="prevSection('radio0ClientSection','radio0MeshSection');return false;">Previous</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="skipSection('radio0ClientSection','lanSection'); return false;">Skip</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="nextSection('radio0ClientSection','lanSection'); return false;">Next</button>
+			</div>
+		</div>
+		<div id="lanSection" class="section">
+			<h3>LAN Configuration</h3>
+			<div class="help">
+				<p>Hier k&ouml;nnen Sie Ihr locales Netzwerk konfigieren,
+					&uuml;ber das der Router bei Ihnen zu Hause erreichbar, wenn Sie
+					ein Netzwerkkabel anschlie&szlig;en. ist</p>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="ip4">IPv4-Address</label>
+				<div class="cbi-value-field">
+					<input type="password" id="ip4" name="password" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="netmask">IPv4-Netmask</label>
+				<div class="cbi-value-field">
+					<input type="password" id="netmask" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="gateway">IPv4-Gateway</label>
+				<div class="cbi-value-field">
+					<input type="password" id="gateway" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="ip6">IPv6-Assign</label>
+				<div class="cbi-value-field">
+					<input type="password" id="ip6" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="dns">DNS-Server</label>
+				<div class="cbi-value-field">
+					<input type="password" id="dns" name="confirmation" />
+				</div>
+			</div>
+			<div class="cbi-page-actions">
+				<button class="cbi-button cbi-button-save" type="button" name="skip"
+					onclick="prevSection('lanSection','radio0ClientSection');return false;">Previous</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="skipSection('lanSection','internetSection'); return false;">Skip</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="nextSection('lanSection','internetSection'); return false;">Next</button>
+			</div>
+		</div>
+		<div id="internetSection" class="section">
+			<h3>Internet Configuration</h3>
+			<div class="help">
+				<p>Stellen Sie hier ein, ob Sie ihr Internet mit der Freifunk
+					Community teilen m&ouml;chten.</p>
+				<p>{Erkl&auml;rung Network or Modem device}</p>
+				<p>{Erkl&auml;rung Upload Bandbreite}</p>
+				<p>{Erkl&auml;rung Download Bandbreite}</p>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="enableInternet">Eigenen
+					Internetzugang freigeben</label>
+				<div class="cbi-value-field">
+					<input type="checkbox" checked="checked" value="1"
+						name="cbid.ffwizward.1.sharenet" id="enableInternet"
+						class="cbi-input-checkbox">
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="wanZeugs">WAN-Zugriff
+					auf Gateway beschr&auml;nken</label>
+				<div class="cbi-value-field">
+					<input type="checkbox" value="0" name="cbid.ffwizward.1.sharenet"
+						id="wanZeugs" class="cbi-input-checkbox">
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="wanZeugs2">Zugriff vom
+					WANauf das Ger&auml;t erlauben</label>
+				<div class="cbi-value-field">
+					<input type="checkbox" value="0" name="cbid.ffwizward.1.sharenet"
+						id="wanZeugs" class="cbi-input-checkbox">
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="device">Network or Modem
+					device</label>
+				<div class="cbi-value-field">
+					<input type="text" name="cbid.ffwizward.1.sharenet" id="device">
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="bandbreitedown">Upload
+					Bandbreite begrenzen</label>
+				<div class="cbi-value-field">
+					<select id="bandbreitedown" class="cbi-input-select">
+						<option value=""></option>
+						<option value="1000">1 MBit/s</option>
+						<option value="10000">10 MBit/s</option>
+						<option value="100000">100 MBit/s</option>
+						<option value="">-- custom --</option>
+					</select>
+				</div>
+			</div>
+			<div class="cbi-value">
+				<label class="cbi-value-title" for="bandbreiteup">Download
+					Bandbreite begrenzen</label>
+				<div class="cbi-value-field">
+					<select id="bandbreiteup" class="cbi-input-select">
+						<option value=""></option>
+						<option value="1000">1 MBit/s</option>
+						<option value="10000">10 MBit/s</option>
+						<option value="100000">100 MBit/s</option>
+						<option value="">-- custom --</option>
+					</select>
+				</div>
+			</div>
+			<div class="cbi-page-actions">
+				<button class="cbi-button cbi-button-save" type="button" name="skip"
+					onclick="prevSection('internetSection','lanSection');return false;">Previous</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="skipSection('internetSection','overviewSection'); return false;">Skip</button>
+				<button class="cbi-button cbi-button-save" type="button" name="next"
+					onclick="nextSection('lanSection','overviewSection'); return false;">Next</button>
+			</div>
+		</div>
+	</form>
+</body>

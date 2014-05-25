@@ -1,0 +1,39 @@
+.clear {
+	clear: both;
+}
+
+#configNavi {
+	float: left;
+}
+
+#configNavi ul {
+	list-style: none;
+}
+
+#configNavi li {
+	padding: 10px 5px 10px 20px;
+}
+
+#configNavi li.selected {
+	background-color: #ffcb05;
+}
+
+#configNavi li.validated {
+	background-image: url('valid.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+//
+#configNavi li:hover { //
+	background-color: ffe880;
+	//
+}
+
+.section {
+	margin-left: 200px
+}
+
+.help {
+	margin: 10px 0 20px 0;
+}
